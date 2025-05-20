@@ -63,6 +63,7 @@ export async function createInvoice(_prevState: State, formData: FormData) {
     `;
   } catch (error) {
     // If a database error occurs, return a more specific error.
+    console.error('Error creating invoice:', error);
     return {
       message: 'Database Error: Failed to Create Invoice.',
     };
@@ -103,6 +104,7 @@ export async function updateInvoice(id: string, _prevState: State, formData: For
     `;
   } catch (error) {
     // If a database error occurs, return a more specific error.
+    console.error('Error updating invoice:', error);
     return {
       message: 'Database Error: Failed to Update Invoice.',
     };
